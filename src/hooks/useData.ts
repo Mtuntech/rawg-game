@@ -2,6 +2,7 @@ import { AxiosRequestConfig, CanceledError } from "axios";
 import { useEffect, useState } from "react";
 import apiClient from "../services/app-client";
 import { Genre } from "./useGenres";
+import { GameQuery } from "../App";
 
 interface FetchResponse {
   count: number;
@@ -11,7 +12,7 @@ interface FetchResponse {
 const useData = <T>(
   endpoint: string,
   requestConfig?: AxiosRequestConfig,
-  deps?: any[]
+  deps?: GameQuery[]
 ) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
