@@ -1,6 +1,6 @@
 import { AxiosRequestConfig, CanceledError } from "axios";
 import { useEffect, useState } from "react";
-import apiClient from "../services/app-client";
+import apiClient from "../services/api-client";
 import { Genre } from "./useGenres";
 import { GameQuery } from "../App";
 
